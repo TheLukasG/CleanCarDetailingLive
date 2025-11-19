@@ -24,9 +24,8 @@ export default defineStackbitConfig({
         })
     ],
 
-    postInstallCommand: "npm i --no-save @stackbit/types"
-});
-siteMap: ({ documents }) => {
+    // siteMap muss innerhalb des Objekts stehen
+    siteMap: ({ documents }) => {
         return documents
             .filter(doc => doc.modelName === "Page")
             .map(doc => ({
