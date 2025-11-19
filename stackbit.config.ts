@@ -26,3 +26,15 @@ export default defineStackbitConfig({
 
     postInstallCommand: "npm i --no-save @stackbit/types"
 });
+siteMap: ({ documents }) => {
+        return documents
+            .filter(doc => doc.modelName === "Page")
+            .map(doc => ({
+                stableId: doc.id,
+                urlPath: `/${doc.slug}`,
+                documentId: doc.id
+            }));
+    },
+
+    postInstallCommand: "npm i --no-save @stackbit/types"
+});
