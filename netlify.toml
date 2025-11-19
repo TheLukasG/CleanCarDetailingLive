@@ -5,7 +5,7 @@
 
 [dev]
   command = "gatsby develop"
-  port = 8000
+  port = 8889
   framework = "gatsby"
   # optional: envFile = ".env.development"  # falls du env-Variablen hast
 
